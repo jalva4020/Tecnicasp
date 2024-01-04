@@ -1,0 +1,89 @@
+body {
+  font-family: Georgia, 'thid is roman', Times, serif, sans-serif;
+  margin: 100x;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../imagenes/8088706.gif");
+  background-size: cover;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid #333;
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background-color: #f0f0f0;
+  background-image: url('../imagenes/gato00.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.flipped {
+  background-color: #f7f7f7;
+  transform: rotateY(180deg);
+}
+
+.split-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.board {
+  flex: content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 1px;
+  margin: 50px;
+  border: 10px solid #b4a8a8;
+}
+
+.moves-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.moves-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.moves {
+  font-size: 10px;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.timer {
+  font-size: 40px;
+}
+
+.game-container {
+  display: flexbox;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px;
+}

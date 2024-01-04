@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de memoria</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center my-3">JUEGO DE MEMORIA</h1>
+            </div>
+            <div class="col-12">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item">
+                        <span>Jugador: <span class="player-1"></span></span>
+                    </li>
+                    <li class="nav-item">
+                        <input type="text" id="nombreJugador" placeholder="Nombre del jugador">
+                    </li>
+                    <li class="nav-item">
+                        <span>intentos: <span class="intentos"> 0</span></span>
+                    </li>
+                    <li class="nav-item">
+                        <span>Aciertos: <span class="aciertos">0</span></span>
+                    </li>
+                    <li class="nav-item">
+                        <span>Tiempo: <span class="tiempo">0</span></span>
+                    </li>
+                    <li class="nav-item">
+                        <span>Nivel: <span class="nivel">0</span></span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="boton-iniciar btn btn-success" onclick="iniciarJuego()">Iniciar</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-success my-3" style="font-size: 2rem; color: #fff; text-align: left; text-shadow: 2px 2px 4px rgba(45, 248, 23, 0.978);">Tablero del juego</h2>
+                <hr>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="tablero row">
+                            <!-- Aquí va el contenido del tablero -->
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <!-- Records del juego -->
+                        <table class="table estadisticas">
+                            <thead>
+                                <th>Puesto</th>
+                                <th>Jugador</th>
+                                <th>Tiempo Juego</th>
+                                <th>Intentos Totales</th>
+                            </thead>
+                            <tbody id="tablaEstadisticas">
+                                <!-- Aquí van los datos del jugador -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="sonidoE" src="./sound/sonido/ringtones-zelda-dialogue-done.mp3"></audio>
+    <audio id="sonidoB" src="./sound/sonido/zelda-navi-listen.mp3"></audio>
+    <audio id="sonidoF" src="./sound/sonido/01 Title BGM.mp3"></audio>
+    <audio id="sonidoG" src="./sound/sonido/zelda-got-item-ringtones.mp3"></audio>
+    <audio id="sonidoP" src="./sound/sonido/zelda-oot-item-get (2).mp3"></audio>
+    <script src="./main/funciones.js"></script>
+</body>
+</html>

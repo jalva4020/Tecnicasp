@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de memoria</title>
+  <link rel="stylesheet" href="./estilos/inicio.css"> 
+</head>
+<body>
+
+  <audio id="audioFondo" loop>
+    <source src="./sound/sonido/01 Title BGM.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+
+  <div class="inicio-container">
+    <img src="./imagenes/gifINICIO/newINICIO.gif" alt="Gif de inicio" class="inicio-gif">
+  </div>
+
+  <div class="opciones-container" style="display: none;">
+    <a class="boton boton-arriba" href="#" id="solo">Solo</a>
+    <a class="boton boton-abajo" href="#" id="multi">MultiPlayer</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var audioElement = document.getElementById('audioFondo');
+      var gifElement = document.querySelector('.inicio-gif');
+      var opcionesContainer = document.querySelector('.opciones-container');
+
+      function mostrarOpciones() {
+        gifElement.style.display = 'none'; 
+        opcionesContainer.style.display = 'block';
+
+        
+        document.getElementById('solo').addEventListener('click', function() {
+          
+          window.location.href = './index.html';
+        });
+
+        document.getElementById('multi').addEventListener('click', function() {
+         
+          window.location.href = './multi.html';
+        });
+  
+      }
+      audioElement.play()
+        .then(function() {
+          console.log('Audio is playing');
+        })
+        .catch(function(error) {
+          console.log('Error playing audio:', error);
+        });
+
+      setTimeout(mostrarOpciones, 3000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
